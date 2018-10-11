@@ -41,12 +41,12 @@ public class ViewportUtils {
 
         // draw vertical lines
         for(int x = -doubleWorldWidth; x < doubleWorldWidth; x += cellSize){
-            renderer.line(x, -doubleWorldWidth, x, doubleWorldWidth);
+            renderer.line(x, -doubleWorldHeight, x, doubleWorldHeight);
         }
 
-        // draw horizontal linew
+        // draw horizontal lines
         for(int y = -doubleWorldHeight; y < doubleWorldHeight; y += cellSize){
-            renderer.line(-doubleWorldHeight, y, doubleWorldHeight, y);
+            renderer.line(-doubleWorldWidth, y, doubleWorldWidth, y);
         }
 
         // draw x/y axis lines
@@ -55,6 +55,7 @@ public class ViewportUtils {
         renderer.line(-doubleWorldHeight, 0, doubleWorldHeight, 0);
 
         // draw world bounds
+        renderer.setColor(Color.GREEN);
         renderer.line(0, worldHeight, worldWidth, worldHeight);
         renderer.line(worldWidth, 0, worldWidth, worldHeight);
 

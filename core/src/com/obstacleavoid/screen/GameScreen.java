@@ -10,6 +10,7 @@ import com.obstacleavoid.config.GameConfig;
 import com.obstacleavoid.entity.Player;
 import com.obstacleavoid.util.GdxUtils;
 import com.obstacleavoid.util.ViewportUtils;
+import com.obstacleavoid.util.debug.DebugCameraController;
 
 public class GameScreen implements Screen {
 
@@ -20,6 +21,7 @@ public class GameScreen implements Screen {
     private ShapeRenderer renderer;
 
     private Player player;
+    private DebugCameraController debugCameraController;
 
     @Override
     public void show () {
@@ -31,15 +33,26 @@ public class GameScreen implements Screen {
         player = new Player();
 
         // calculate position
-        float startPlayerX = GameConfig.WORLD_WIDTH / 2;
-        float startPlayerY = 1;
+//        float startPlayerX = GameConfig.WORLD_WIDTH / 2;
+//        float startPlayerY = 1;
+
+        float startPlayerX = 12;
+        float startPlayerY = 12;
 
         // position player
         player.setPosition(startPlayerX, startPlayerY);
+
+        // create Debug camera Controller
+        debugCameraController = new DebugCameraController();
+        debugCameraController.setStartPosition(GameConfig.WORLD_CENTER_X, GameConfig.WORLD_CENTER_Y);
+
     }
 
     @Override
     public void render (float delta) {
+        debugCameraController.handleDebugInput(delta);
+        debugCameraController.applyTo(camera);
+
         // update world
         update(delta);
 
@@ -98,4 +111,5 @@ public class GameScreen implements Screen {
     public void hide() {
         renderer.dispose();
     }
+
 }
