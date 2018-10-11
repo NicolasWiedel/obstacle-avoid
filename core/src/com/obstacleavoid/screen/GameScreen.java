@@ -55,7 +55,6 @@ public class GameScreen implements Screen {
     }
 
     private void updatePlayer(){
-        log.debug("playerX = " + player.getX() + " playerY = " + player.getY());
         player.update();
     }
 
