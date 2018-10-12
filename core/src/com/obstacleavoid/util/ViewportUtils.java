@@ -52,7 +52,7 @@ public class ViewportUtils {
         // draw x/y axis lines
         renderer.setColor(Color.RED);
         renderer.line(0, -doubleWorldHeight, 0, doubleWorldHeight);
-        renderer.line(-doubleWorldHeight, 0, doubleWorldHeight, 0);
+        renderer.line(-doubleWorldWidth, 0, doubleWorldWidth, 0);
 
         // draw world bounds
         renderer.setColor(Color.GREEN);
