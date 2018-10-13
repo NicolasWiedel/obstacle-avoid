@@ -42,7 +42,7 @@ public class DebugCameraController {
         }
 
         float moveSpeed = config.getMoveSpeed() * delta;
-        float zoomSpeed = config.getMoveSpeed() * delta;
+        float zoomSpeed = config.getZoomSpeed() * delta;
 
         // move controls
         if(config.isLeftPressed()){
