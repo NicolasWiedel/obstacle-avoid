@@ -16,6 +16,8 @@ public class GameConfig {
 
     public static final float MAX_PLAYER_X_SPEED = 0.25f;
     public static final float OBSTACLE_SPAWN_TIME = 0.25f;
+    public static final float SCORE_MAX_TIME = 1.25f;
+
     public static final int LIVES_START = 3;
 
     private GameConfig(){

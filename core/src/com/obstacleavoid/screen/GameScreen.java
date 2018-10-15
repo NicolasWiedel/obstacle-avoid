@@ -39,7 +39,9 @@ public class GameScreen implements Screen {
     private Player player;
     private Array<Obstacle> obstacles = new Array<Obstacle>();
     private float obstacleTime;
+    private float scoreTimer;
     private int lives = GameConfig.LIVES_START;
+    private int score;
 
     private DebugCameraController debugCameraController;
 
@@ -94,6 +96,7 @@ public class GameScreen implements Screen {
     private void update(float delta){
         updatePlayer();
         updateObstacles(delta);
+        updateScore(delta);
 
         if(isPlayerCollidingWithObstacle()){
             log.debug("Collision detected!");
@@ -153,10 +156,18 @@ public class GameScreen implements Screen {
         batch.begin();
 
         String livesText = "LIVES " + lives;
+
         layout.setText(font, livesText);
 
         font.draw(batch, livesText,
                 20,
+                GameConfig.HUD_HEIGHT - layout.height);
+
+        String scoreText = "SCORE = " + score;
+        layout.setText(font, scoreText);
+
+        font.draw(batch, scoreText,
+                GameConfig.HUD_WIDTH - layout.width - 20,
                 GameConfig.HUD_HEIGHT - layout.height);
 
         batch.end();
@@ -179,6 +190,15 @@ public class GameScreen implements Screen {
 
         for(Obstacle obstacle : obstacles){
             obstacle.drawDebug(renderer);
+        }
+    }
+
+    private void updateScore(float delta){
+        scoreTimer += delta;
+
+        if(scoreTimer >= GameConfig.SCORE_MAX_TIME){
+            score += MathUtils.random(1, 5);
+            scoreTimer = 0.0f;
         }
     }
 
