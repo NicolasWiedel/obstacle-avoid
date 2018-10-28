@@ -7,6 +7,8 @@ public abstract class GameObjectBase {
 
     private float x;
     private float y;
+    private float width = 1;
+    private float height = 1;
 
     private Circle bounds;
 
@@ -33,6 +35,16 @@ public abstract class GameObjectBase {
         return y;
     }
 
+    public void setSize(float width, float height){
+        this.width = width;
+        this.height = height;
+        updateBounds();
+    }
+
+    public float getWidth(){ return width; }
+
+    public float getHeight() { return height; }
+
     public void setX(float x) {
         this.x = x;
         updateBounds();
@@ -44,7 +56,9 @@ public abstract class GameObjectBase {
     }
 
     public void updateBounds(){
-        bounds.setPosition(x, y);
+        float halfWidth = width / 2;
+        float halfHeight = height / 2;
+        bounds.setPosition(x + halfWidth, y + halfHeight);
     }
 
     public Circle getBounds() {
