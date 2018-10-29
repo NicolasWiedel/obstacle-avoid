@@ -1,9 +1,8 @@
-package com.obstacleavoid.screen;
+package com.obstacleavoid.screen.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -17,7 +16,6 @@ import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.obstacleavoid.assets.AssetDescriptors;
-import com.obstacleavoid.assets.AssetPaths;
 import com.obstacleavoid.assets.RegionNames;
 import com.obstacleavoid.config.GameConfig;
 import com.obstacleavoid.entity.Background;
@@ -108,7 +106,7 @@ public class GameRenderer implements Disposable {
         renderUI();
 
         // render debug graphics
-        renderDebug();
+//        renderDebug();
 
         System.out.println("totalRenserCalls = " + batch.totalRenderCalls);
     }
