@@ -22,9 +22,7 @@ public class GameScreen implements Screen {
     public void show() {
 
         assetManager.load(AssetDescriptors.FONT);
-        assetManager.load(AssetDescriptors.BACKGROUND);
-        assetManager.load(AssetDescriptors.OBSACLE);
-        assetManager.load(AssetDescriptors.PLAYER);
+        assetManager.load(AssetDescriptors.GAME_PLAY);
 
         assetManager.finishLoading();
 
