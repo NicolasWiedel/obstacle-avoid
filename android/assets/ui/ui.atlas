@@ -1,0 +1,97 @@
+
+ui.png
+size: 1024,512
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+back
+  rotate: false
+  xy: 556, 422
+  size: 249, 80
+  orig: 249, 80
+  offset: 0, 0
+  index: -1
+backPressed
+  rotate: false
+  xy: 304, 258
+  size: 249, 80
+  orig: 249, 80
+  offset: 0, 0
+  index: -1
+check-mark
+  rotate: false
+  xy: 807, 467
+  size: 43, 35
+  orig: 43, 35
+  offset: 0, 0
+  index: -1
+easy
+  rotate: false
+  xy: 556, 340
+  size: 249, 80
+  orig: 249, 80
+  offset: 0, 0
+  index: -1
+hard
+  rotate: false
+  xy: 304, 176
+  size: 249, 80
+  orig: 249, 80
+  offset: 0, 0
+  index: -1
+highscore
+  rotate: false
+  xy: 304, 422
+  size: 250, 80
+  orig: 250, 80
+  offset: 0, 0
+  index: -1
+highscorePressed
+  rotate: false
+  xy: 304, 340
+  size: 250, 80
+  orig: 250, 80
+  offset: 0, 0
+  index: -1
+medium
+  rotate: false
+  xy: 555, 258
+  size: 249, 80
+  orig: 249, 80
+  offset: 0, 0
+  index: -1
+options
+  rotate: false
+  xy: 304, 94
+  size: 249, 80
+  orig: 249, 80
+  offset: 0, 0
+  index: -1
+optionsPressed
+  rotate: false
+  xy: 555, 176
+  size: 249, 80
+  orig: 249, 80
+  offset: 0, 0
+  index: -1
+panel
+  rotate: false
+  xy: 2, 2
+  size: 300, 500
+  orig: 300, 500
+  offset: 0, 0
+  index: -1
+play
+  rotate: false
+  xy: 304, 12
+  size: 249, 80
+  orig: 249, 80
+  offset: 0, 0
+  index: -1
+playPressed
+  rotate: false
+  xy: 555, 94
+  size: 249, 80
+  orig: 249, 80
+  offset: 0, 0
+  index: -1
