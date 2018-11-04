@@ -4,6 +4,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
 import com.obstacleavoid.ObstacleAvoidGame;
 import com.obstacleavoid.assets.AssetDescriptors;
+import com.obstacleavoid.screen.menu.MenuScreen;
 
 public class GameScreen implements Screen {
 
@@ -28,6 +29,10 @@ public class GameScreen implements Screen {
     public void render(float delta) {
         controller.update(delta);
         renderer.render(delta);
+
+        if(controller.isGameOver()){
+            game.setScreen(new MenuScreen(game));
+        }
     }
 
     @Override

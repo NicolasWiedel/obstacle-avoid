@@ -10,6 +10,8 @@ import com.obstacleavoid.ObstacleAvoidGame;
 import com.obstacleavoid.assets.AssetDescriptors;
 import com.obstacleavoid.config.GameConfig;
 import com.obstacleavoid.screen.game.GameScreen;
+import com.obstacleavoid.screen.menu.HighScoreScreen;
+import com.obstacleavoid.screen.menu.MenuScreen;
 import com.obstacleavoid.util.GdxUtils;
 
 public class LoadingScreen extends ScreenAdapter {
@@ -63,7 +65,7 @@ public class LoadingScreen extends ScreenAdapter {
         renderer.end();
 
         if(changeScreen){
-            game.setScreen(new GameScreen(game));
+            game.setScreen(new MenuScreen(game));
         }
     }
 
