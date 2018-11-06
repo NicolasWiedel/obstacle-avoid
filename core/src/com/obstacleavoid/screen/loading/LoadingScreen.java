@@ -1,7 +1,6 @@
 package com.obstacleavoid.screen.loading;
 
 import com.badlogic.gdx.ScreenAdapter;
-import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
@@ -10,8 +9,6 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import com.obstacleavoid.ObstacleAvoidGame;
 import com.obstacleavoid.assets.AssetDescriptors;
 import com.obstacleavoid.config.GameConfig;
-import com.obstacleavoid.screen.game.GameScreen;
-import com.obstacleavoid.screen.menu.HighScoreScreen;
 import com.obstacleavoid.screen.menu.MenuScreen;
 import com.obstacleavoid.util.GdxUtils;
 
@@ -49,8 +46,8 @@ public class LoadingScreen extends ScreenAdapter {
 
         assetManager.load(AssetDescriptors.FONT);
         assetManager.load(AssetDescriptors.GAME_PLAY);
-        assetManager.load(AssetDescriptors.UI);
         assetManager.load(AssetDescriptors.UI_SKIN);
+        assetManager.load(AssetDescriptors.HIT_SOUND);
     }
 
     @Override

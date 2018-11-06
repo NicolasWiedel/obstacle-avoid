@@ -21,12 +21,6 @@ public class AssetPacker {
         );
 
         TexturePacker.process(settings,
-                RAW_ASSETS_PATH + "/ui",
-                ASSETS_PATH + "/ui",
-                "ui"
-                );
-
-        TexturePacker.process(settings,
                 RAW_ASSETS_PATH + "/skin",
                 ASSETS_PATH + "/ui",
                 "uiskin");
